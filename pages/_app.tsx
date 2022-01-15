@@ -14,6 +14,26 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
+export const INFORMATION = {
+  avatar: "/assets/avatar.jpg",
+  banner: "/assets/banner.jpg",
+  title: "Nombre y Apellido o lalalal",
+  description: "Props y mas props.",
+  phone: `5491141414141`,
+  sheet: `https://docs.google.com/spreadsheets/d/e/2PACX-1vQG1pOSbGxaJYzlOWF2t7KFyP5wtWo_EDS0crTllQtALvDDZBq7OwxvTDJwM4dmasW7wmNh6KFB443j/pub?output=csv`,
+  color: `teal`,
+  social: [
+    {
+      name: "instagram",
+      url: `https://instagram.com/goncy.js`,
+    },
+    {
+      name: "whatsapp",
+      url: `https://wa.me/5491141414141`,
+    },
+  ],
+};
+
 function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
@@ -25,13 +45,14 @@ function App({ Component, pageProps }: AppProps) {
       >
         <Stack spacing={8}>
           <Stack marginBottom={4} spacing={4}>
-            {/* <Image
+            <Image
               borderRadius="lg"
               height="100%"
               maxHeight={64}
               objectFit="cover"
               src={INFORMATION.banner}
-            /> */}
+              alt="banner"
+            />
             <Stack
               alignItems="center"
               direction={{ base: "column", sm: "row" }}
@@ -44,12 +65,13 @@ function App({ Component, pageProps }: AppProps) {
                 minWidth={{ base: 24, sm: 32 }}
                 padding={1}
               >
-                {/* <Image
+                <Image
                   borderRadius={9999}
                   height={{ base: 24, sm: 32 }}
                   src={INFORMATION.avatar}
                   width={{ base: 24, sm: 32 }}
-                /> */}
+                  alt="avatar"
+                />
               </Box>
               <Stack
                 alignItems={{ base: "center", sm: "flex-start" }}
@@ -57,12 +79,12 @@ function App({ Component, pageProps }: AppProps) {
                 textAlign={{ base: "center", sm: "left" }}
               >
                 <Stack spacing={0}>
-                  <Heading>titulo</Heading>
+                  <Heading>{INFORMATION.title}</Heading>
                   <Text color="gray.500" fontWeight="500">
-                    Description
+                    {INFORMATION.description}
                   </Text>
                 </Stack>
-                {/* <Stack direction="row">
+                <Stack direction="row">
                   {INFORMATION.social.map((social) => (
                     <Link key={social.name} isExternal href={social.url}>
                       <Flex
@@ -75,28 +97,28 @@ function App({ Component, pageProps }: AppProps) {
                         width={10}
                       >
                         <Image
+                          alt={social.name}
                           src={`https://icongr.am/fontawesome/${social.name}.svg?size=24&color=ffffff`}
                         />
                       </Flex>
                     </Link>
                   ))}
-                </Stack> */}
+                </Stack>
               </Stack>
             </Stack>
           </Stack>
           <Component {...pageProps} />
         </Stack>
         <Divider marginY={4} />
-        {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
-        {/* <Text textAlign="center">
+
+        <Text textAlign="center">
           © Copyright {new Date().getFullYear()}. Hecho con ♥ para la comunidad,
           por{" "}
           <Link isExternal href="https://gonzalopozzo.com">
             goncy
           </Link>
           .
-        </Text> */}
-        {/* Fin de copyright */}
+        </Text>
       </Container>
     </ChakraProvider>
   );
