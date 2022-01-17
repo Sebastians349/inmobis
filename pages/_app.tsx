@@ -15,12 +15,13 @@ import {
 } from "@chakra-ui/react";
 
 export const INFORMATION = {
+  // ojo con enrutar via /public porque no lo toma de esa manera. Lo mismo pasa en el JSON
   avatar: "/assets/avatar.jpg",
   banner: "/assets/banner.jpg",
-  title: "Nombre y Apellido o lalalal",
-  description: "Props y mas props.",
+  title: "Estefanía de Mónaco",
+  description: "Remax partner",
   phone: `5491141414141`,
-  sheet: `https://docs.google.com/spreadsheets/d/e/2PACX-1vQG1pOSbGxaJYzlOWF2t7KFyP5wtWo_EDS0crTllQtALvDDZBq7OwxvTDJwM4dmasW7wmNh6KFB443j/pub?output=csv`,
+  // sheet: `https://docs.google.com/spreadsheets/d/e/2PACX-1vQG1pOSbGxaJYzlOWF2t7KFyP5wtWo_EDS0crTllQtALvDDZBq7OwxvTDJwM4dmasW7wmNh6KFB443j/pub?output=csv`,
   color: `teal`,
   social: [
     {
@@ -114,9 +115,9 @@ function App({ Component, pageProps }: AppProps) {
         <Text textAlign="center">
           © Copyright {new Date().getFullYear()}. Hecho con ♥ para la comunidad,
           por{" "}
-          <Link isExternal href="https://gonzalopozzo.com">
+          {/* <Link isExternal href="https://gonzalopozzo.com">
             goncy
-          </Link>
+          </Link> */}
           .
         </Text>
       </Container>
