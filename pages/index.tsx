@@ -8,7 +8,7 @@ interface Props {
   properties: Property[];
 }
 
-const Home: NextPage<Props> = ({ properties = [] }) => {
+const Home: NextPage<Props> = ({ properties }) => {
   return <PropertiesScreen properties={properties} />;
 };
 
