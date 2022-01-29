@@ -1,0 +1,23 @@
+[
+  {
+    "id": "first",
+    "title": "Primera propiedad",
+    "description": "descripcion de la misma",
+    "images": ["/assets/naon.jpg"],
+    "price": 1000000
+  },
+  {
+    "id": "second",
+    "title": "Segunda propiedad",
+    "description": "descripcion de la misma",
+    "images": ["/assets/amenabar.jpg"],
+    "price": 3000000
+  },
+  {
+    "id": "third",
+    "title": "Tercera propiedad",
+    "description": "descripcion de la misma",
+    "images": ["/assets/pilar.jpg"],
+    "price": 4000000
+  }
+]
