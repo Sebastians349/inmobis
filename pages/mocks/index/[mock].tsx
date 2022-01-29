@@ -12,7 +12,7 @@ interface Params extends ParsedUrlQuery {
   mock: string;
 }
 
-const HomeScreen: NextPage<Props> = ({ properties = [] }) => {
+const PropertiesPage: NextPage<Props> = ({ properties }) => {
   return <PropertiesScreen properties={properties} />;
 };
 
@@ -37,4 +37,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: process.env.NODE_ENV === "production" ? false : "blocking",
   };
 };
-export default HomeScreen;
+export default PropertiesPage;

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "first",
+    "title": "Primera propiedad",
+    "description": "descripcion de la misma",
+    "images": ["/assets/naon.jpg"],
+    "price": 1000000
+  }
+]

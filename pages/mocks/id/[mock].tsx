@@ -2,30 +2,30 @@ import type { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import type { Property } from "../../../property/types";
 import type { ParsedUrlQuery } from "querystring";
 
-import PropertiesScreen from "../../../property/screens/Properties";
 import api from "../../../property/api";
+import PropertyScreen from "../../../property/screens/Property";
 
 interface Props {
-  properties: Property[];
+  property: Property;
 }
 interface Params extends ParsedUrlQuery {
   mock: string;
 }
 
-const PropertyScreen: NextPage<Props> = ({ properties }) => {
-  return <PropertiesScreen properties={properties} />;
+const PropertyPage: NextPage<Props> = ({ property }) => {
+  return <PropertyScreen property={property} />;
 };
 
 export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
 }) => {
-  const properties = await api.mock.list(params?.mock as string);
+  const property = await api.mock.fetch(params?.mock as string);
 
   return {
     // Revalidate every 1 second
     revalidate: 1,
     props: {
-      properties,
+      property,
     },
   };
 };
@@ -37,4 +37,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: process.env.NODE_ENV === "production" ? false : "blocking",
   };
 };
-export default PropertyScreen;
+export default PropertyPage;

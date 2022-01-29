@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Button, Text, Image } from "@chakra-ui/react";
+import { Stack, Text, Image } from "@chakra-ui/react";
 
 import { parseCurrency } from "../../utils/currency";
 import { Property } from "../types";
