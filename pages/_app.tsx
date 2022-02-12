@@ -26,7 +26,7 @@ export const INFORMATION = {
   social: [
     {
       name: "instagram",
-      url: `https://instagram.com/goncy.js`,
+      url: `https://instagram.com/`,
     },
     {
       name: "whatsapp",

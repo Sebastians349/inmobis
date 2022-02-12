@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Grid, Text } from "@chakra-ui/react";
 import { Property } from "../types";
 import PropertyCard from "../components/PropertyCard";
+import Link from "next/link";
 
 interface Props {
   properties: Property[];
@@ -19,7 +20,11 @@ const PropertiesScreen: React.VFC<Props> = ({ properties }) => {
           }}
         >
           {properties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
+            <Link key={property.id} href={`/${property.id}`}>
+              <a>
+                <PropertyCard key={property.id} property={property} />
+              </a>
+            </Link>
           ))}
         </Grid>
       ) : (

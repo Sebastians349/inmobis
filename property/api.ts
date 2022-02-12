@@ -2,7 +2,7 @@ import { Property } from "./types";
 
 const api = {
   list: async (): Promise<Property[]> => [],
-  id: async (id: Property["id"]): Promise<Property> => ({ id } as Property),
+  fetch: async (id: Property["id"]): Promise<Property> => ({ id } as Property),
 
   mock: {
     list: async (mock: string): Promise<Property[]> =>
