@@ -115,9 +115,9 @@ function App({ Component, pageProps }: AppProps) {
         <Text textAlign="center">
           © Copyright {new Date().getFullYear()}. Hecho con ♥ para la comunidad,
           por{" "}
-          {/* <Link isExternal href="https://gonzalopozzo.com">
+          <Link isExternal href="https://gonzalopozzo.com">
             goncy
-          </Link> */}
+          </Link>
           .
         </Text>
       </Container>
